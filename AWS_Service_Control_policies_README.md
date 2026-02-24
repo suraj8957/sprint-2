@@ -304,7 +304,7 @@ Expected: Denied
 
 Test 3:
 Launch redshift  
-Expected: Allowed
+Expected: Denied
 <img width="1366" height="730" alt="image" src="https://github.com/user-attachments/assets/10de30a3-0be2-484c-bfcb-13fb30b65783" />
 
 
