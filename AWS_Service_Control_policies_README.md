@@ -4,9 +4,9 @@
 
 ## Document Details
 
-| Author           | Created    | Version | Last updated by  | Last Edited On | L0 Reviewer | L1 Reviewer | L2 Reviewer |
-| ---------------- | ---------- | ------- | ---------------- | -------------- | ----------- | ----------- | ----------- |
-| Aditya Raj Singh | 2026-02-23 | 2.0     | Suraj Tripathi   | 2026-02-23     | Divya Mishra| Pritam      |             |
+| Author | Created on | Version | Last updated by | Last edited on | Pre Reviewer | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+|--------|------------|---------|-----------------|----------------|--------------|-------------|-------------|-------------|
+| Suraj Tripathi | 12-02-2026 | v1.0 | Suraj Tripathi | 12-02-2026 |              | Aniruddh    | Shreya S    | Ashwani |
 
 ---
 
@@ -265,8 +265,8 @@ PHASE 6 – Move Account to OU
 3. Click Move
 4. Choose target OU
 5. Confirm
-<img width="1919" height="801" alt="image" src="https://github.com/user-attachments/assets/5f16d65d-47ed-4525-be35-3dca10a53f44" />
-
+<img width="1219" height="203" alt="image" src="https://github.com/user-attachments/assets/5c774876-1038-48ad-b637-a582ac683c72" />
+<img width="1918" height="746" alt="image" src="https://github.com/user-attachments/assets/748e3810-160c-4ae8-8585-2d49f2f1e858" />
 
 Now SCP applies to that account.
 
@@ -293,14 +293,20 @@ Login to Member Account and test:
 Test 1:
 Launch EC2 in us-east-1  
 Expected: Denied
+<img width="1918" height="746" alt="image" src="https://github.com/user-attachments/assets/41304aa0-d3cd-4756-8a51-d69dba45d5a3" />
+
 
 Test 2:
 Launch p3.2xlarge  
 Expected: Denied
+<img width="1366" height="731" alt="image" src="https://github.com/user-attachments/assets/1e7adcb2-e9f3-43bd-9333-ae65be360a31" />
+
 
 Test 3:
-Launch t3.medium in ap-south-1  
+Launch redshift  
 Expected: Allowed
+<img width="1366" height="730" alt="image" src="https://github.com/user-attachments/assets/10de30a3-0be2-484c-bfcb-13fb30b65783" />
+
 
 Verification:
 
@@ -356,9 +362,11 @@ SCPs define the maximum permission boundary and act as preventive guardrails.
 
 ## 11. Contact Information
 
-| Name             | Team    | Contact Type | Details |
-|------------------|---------|--------------|---------|
-| Suraj Tripathi | Saarthi | Email        | aditya.singh.snaatak@mygurukulam.co |
+| Contact Type | Details                                                             |
+| ------------ | ------------------------------------------------------------------- |
+| Name         | Suraj Tripathi                                                      |
+| Role         | DevOps Trainee                                                      |
+| Email        | [suraj.tripathi.snaatak@mygurukulam.co](mailto:suraj.tripathi.snaatak@mygurukulam.co) |
 
 ---
 
