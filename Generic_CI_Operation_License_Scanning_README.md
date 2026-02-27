@@ -1,4 +1,30 @@
 # Generic CI Operation – License Scanning Documentation
+---
+## Document Details
+
+| Author | Created on | Version | Last updated by | Last edited on | Pre Reviewer | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+|--------|------------|---------|-----------------|----------------|--------------|-------------|-------------|-------------|
+| Suraj Tripathi | 12-02-2026 | v1.0 | Suraj Tripathi | 12-02-2026 |              | Aniruddh    | Shreya S    | Ashwani |
+
+---
+# #Table of Contents
+
+1. [Introduction](#introduction)
+2. [What is License Scanning?](#what-is-license-scanning)
+3. [Why License Scanning is Important](#why-license-scanning-is-important)
+4. [Common License Types](#common-license-types)
+5. [License Scanning Workflow](#license-scanning-workflow)
+6. [Types of License Scanning](#types-of-license-scanning)
+7. [Popular License Scanning Tools](#popular-license-scanning-tools)
+8. [Tools Comparison](#tools-comparison)
+9. [Advantages](#advantages)
+10. [Best Practices](#best-practices)
+11. [Advanced Implementation](#advanced-implementation)
+12. [Challenges](#challenges)
+13. [Recommendation & Conclusion](#recommendation--conclusion)
+14. [Contact Information](#contact-information)
+15. [References](#references)
+---
 ## 1. Introduction:
 In modern CI/CD pipelines, organizations use multiple open-source libraries and third-party dependencies. Every dependency comes with a software license (MIT, Apache, GPL, etc.), which defines how it can be used, modified, and distributed.
 
