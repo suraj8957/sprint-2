@@ -9,9 +9,9 @@
 ---
 # #Table of Contents
 
-1. [Introduction](#introduction)
-2. [What is License Scanning?](#what-is-license-scanning)
-3. [Why License Scanning is Important](#why-license-scanning-is-important)
+1. [Introduction](#1-introduction)
+2. [What is License Scanning?](#2-what-is-license-scanning)
+3. [Why License Scanning is Important](#3-why-license-scanning-is-important)
 4. [Common License Types](#common-license-types)
 5. [License Scanning Workflow](#license-scanning-workflow)
 6. [Types of License Scanning](#types-of-license-scanning)
