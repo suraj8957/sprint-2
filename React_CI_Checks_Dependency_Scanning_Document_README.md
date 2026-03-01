@@ -5,7 +5,7 @@
 
 | Author | Created on | Version | Last updated by | Last edited on | Pre Reviewer | L0 Reviewer | L1 Reviewer | L2 Reviewer |
 |--------|------------|---------|-----------------|----------------|--------------|-------------|-------------|-------------|
-| Suraj Tripathi | 12-02-2026 | v1.0 | Suraj Tripathi | 12-02-2026 |              | Aniruddh    | Shreya S    | Ashwani |
+| Suraj Tripathi | 1-03-2026 | v1.0 | Suraj Tripathi | 1-03-2026 |              | Aniruddh    | Shreya S    | Ashwani |
 
 ---
 ## Table of Contents
@@ -199,7 +199,6 @@ However, for most DevOps-oriented React projects, Trivy provides the best balanc
 
 ## 10. Contact Information
 
-**Prepared By:**  
 | Contact Type | Details                                                             |
 | ------------ | ------------------------------------------------------------------- |
 | Name         | Suraj Tripathi                                                      |
