@@ -29,6 +29,7 @@ https://github.com/OT-MICROSERVICES/employee-api.git
 10. [Best Practices](#best-practices)
 11. [Conclusion](#conclusion)
 12. [Final Recommendation](#Final-Recommendation)
+13. [Contact Information](Contact-Information)
 
 ---
 
