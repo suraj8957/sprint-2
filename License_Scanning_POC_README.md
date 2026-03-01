@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Repository Scanned
+## Repository Scanned
 
 https://github.com/OT-MICROSERVICES/employee-api.git
 
@@ -99,6 +99,8 @@ Run scan inside project directory:
 ```bash
 trivy fs --scanners license .
 ```
+<img width="1698" height="465" alt="image" src="https://github.com/user-attachments/assets/de182322-73e6-4645-9191-5396dd29478b" />
+
 
 This command:
 
@@ -115,12 +117,16 @@ This command:
 ```bash
 trivy fs --scanners license -f table -o license-report.txt .
 ```
+<img width="1889" height="582" alt="image" src="https://github.com/user-attachments/assets/0589d568-3a4a-459f-9387-7c1b91775480" />
+
 
 ### JSON Report (Recommended for Audit)
 
 ```bash
 trivy fs --scanners license -f json -o license-report.json .
 ```
+<img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/6c6ea5e0-6e10-4f5e-985f-47d126741ae1" />
+
 
 This report can be stored for compliance documentation.
 
