@@ -1,12 +1,27 @@
 # React Dependency Scanning – POC
 ---
----
 ## Document Details
 
 | Author | Created on | Version | Last updated by | Last edited on | Pre Reviewer | L0 Reviewer | L1 Reviewer | L2 Reviewer |
 |--------|------------|---------|-----------------|----------------|--------------|-------------|-------------|-------------|
 | Suraj Tripathi | 1-03-2026 | v1.0 | Suraj Tripathi | 1-03-2026 |              | Aniruddh    | Shreya S    | Ashwani |
 
+---
+## Table of Contents
+
+1. [Introduction](#1-introduction)  
+2. [Objective](#2-objective)  
+3. [Prerequisites](#3-prerequisites)  
+4. [Repository Setup](#4-repository-setup)  
+   - [Step 1: Clone the Repository](#step-1-clone-the-repository)  
+   - [Step 2: Install Dependencies](#step-2-install-dependencies)  
+5. [Install Trivy (If Not Installed)](#5-install-trivy-if-not-installed)  
+6. [Run Dependency Scan](#6-run-dependency-scan)  
+   - [Command Explanation](#command-explanation)  
+7. [Severity Filtering (Optional but Recommended)](#7-severity-filtering-optional-but-recommended)  
+8. [Expected Output](#8-expected-output)  
+9. [Conclusion](#9-conclusion)  
+10. [Contact Information](#10-contact-information)  
 ---
 ## 1. Introduction
 
@@ -74,6 +89,8 @@ From the project root directory (where package.json exists), run:
 ```bash
 trivy fs --scanners vuln,license .
 ```
+<img width="1860" height="613" alt="image" src="https://github.com/user-attachments/assets/5a07be19-7cf0-4b44-b41a-16f1c736fc57" />
+
 ### Command Explanation
 - `fs` → Scans local file system
 
@@ -97,6 +114,8 @@ This will scan:
 ```bash
 trivy fs --scanners vuln --severity HIGH,CRITICAL .
 ```
+<img width="1884" height="455" alt="image" src="https://github.com/user-attachments/assets/9e8fc5ad-657e-49c6-9e1d-6228124ab87c" />
+
 #### Fail Command If HIGH/CRITICAL Vulnerabilities Found
 ```bash
 trivy fs --scanners vuln --severity HIGH,CRITICAL --exit-code 1 .
@@ -120,7 +139,18 @@ The scan report will display:
 
 output format:
 ```bash
-
+┌────────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────────────────────────────────┬──────────────────────────────────────────────────────────────┐
+│          Library           │ Vulnerability  │ Severity │ Status │ Installed Version │               Fixed Version               │                            Title                             │
+├────────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ golang.org/x/crypto        │ CVE-2024-45337 │ CRITICAL │ fixed  │ v0.9.0            │ 0.31.0                                    │ golang.org/x/crypto/ssh: Misuse of                           │
+│                            │                │          │        │                   │                                           │ ServerConfig.PublicKeyCallback may cause authorization       │
+│                            │                │          │        │                   │                                           │ bypass in golang.org/x/crypto                                │
+│                            │                │          │        │                   │                                           │ https://avd.aquasec.com/nvd/cve-2024-45337                   │
+│                            ├────────────────┼──────────┤        │                   ├───────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                            │ CVE-2025-22869 │ HIGH     │        │                   │ 0.35.0                                    │ golang.org/x/crypto/ssh: Denial of Service in the Key        │
+│                            │                │          │        │                   │                                           │ Exchange of golang.org/x/crypto/ssh                          │
+│                            │                │          │        │                   │                                           │ https://avd.aquasec.com/nvd/cve-2025-22869                   │
+│                            ├────────────────┼──────────┤        │                   ├─────────────────────────────────────
 ```
 ## 9. Conclusion
 
