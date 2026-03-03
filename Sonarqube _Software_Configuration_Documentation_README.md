@@ -2,12 +2,68 @@
 ## Ansible Role Documentation & POC Setup Guide  
 
 ---
+## Document Details
+
+| Author | Created on | Version | Last updated by | Last edited on | Pre Reviewer | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+|--------|------------|---------|-----------------|----------------|--------------|-------------|-------------|-------------|
+| Suraj Tripathi | 1-03-2026 | v1.0 | Suraj Tripathi | 1-03-2026 |              | Aniruddh    | Shreya S    | Ashwani |
+
+---
+# Table of Contents
+
+1. [Introduction](#1-introduction)
+   - [What is SonarQube?](#what-is-sonarqube)
+
+2. [Objective of This Document](#2-objective-of-this-document)
+
+3. [Why SonarQube?](#3-why-sonarqube)
+
+4. [Why Ansible for SonarQube Setup?](#4-why-ansible-for-sonarqube-setup)
+   - [What is Ansible?](#what-is-ansible)
+
+5. [SonarQube Architecture Overview](#5-sonarqube-architecture-overview)
+
+6. [System Requirements](#6-system-requirements)
+
+7. [Ansible Role Structure](#7-ansible-role-structure)
+
+8. [Role Variables (defaults/main.yml)](#8-role-variables-defaultsmainyml)
+
+9. [Installation Tasks (tasks/install.yml)](#9-installation-tasks-tasksinstallyml)
+
+10. [Configuration Tasks (tasks/configure.yml)](#10-configuration-tasks-tasksconfigureyml)
+
+11. [Service Configuration](#11-service-configuration)
+
+12. [Handlers](#12-handlers)
+
+13. [Deployment Workflow](#13-deployment-workflow)
+
+14. [POC – Manual SonarQube Setup (Without Ansible)](#14-poc--manual-sonarqube-setup-without-ansible)
+   - [Step 1: Install Java](#step-1-install-java)
+   - [Step 2: Install PostgreSQL](#step-2-install-postgresql)
+   - [Step 3: Download SonarQube](#step-3-download-sonarqube)
+   - [Step 4: Configure Database](#step-4-configure-database)
+   - [Step 5: Start SonarQube](#step-5-start-sonarqube)
+   - [Step 6: Access UI](#step-6-access-ui)
+
+15. [Security Best Practices](#15-security-best-practices)
+
+16. [Monitoring Recommendations](#16-monitoring-recommendations)
+
+17. [Advantages of Using Ansible Role](#17-advantages-of-using-ansible-role)
+
+18. [Conclusion](#18-conclusion)
+
+19. [References](#19-references)
+
+20. [Contact Information](#20-contact-information)
+
+---
 
 # 1. Introduction
 
 ## What is SonarQube?
-
-![SonarQube Dashboard](https://docs.sonarqube.org/latest/images/analysis/overview-page.png)
 
 **SonarQube** is an open-source platform used for continuous inspection of code quality. It performs:
 
@@ -272,6 +328,8 @@ sudo -u postgres psql
 CREATE DATABASE sonarqube;
 CREATE USER sonar WITH ENCRYPTED PASSWORD 'sonar123';
 GRANT ALL PRIVILEGES ON DATABASE sonarqube TO sonar;
+GRANT ALL ON SCHEMA public TO sonar;
+ALTER SCHEMA public OWNER TO sonar;
 \q
 ```
 <img width="1854" height="886" alt="image" src="https://github.com/user-attachments/assets/d88db648-1540-4821-9d64-98e850dfc488" />
@@ -314,17 +372,20 @@ sonar.jdbc.url=jdbc:postgresql://localhost/sonarqube
 ## Step 5: Start SonarQube
 
 ```bash
-cd /opt/sonarqube/bin/linux-x86-64
-sudo ./sonar.sh start
+sudo -u sonar /opt/sonarqube/bin/linux-x86-64/sonar.sh start
 ```
+<img width="1851" height="493" alt="image" src="https://github.com/user-attachments/assets/493e08ee-359c-4106-af7b-6f8158f349ce" />
+
 
 ---
 
 ## Step 6: Access UI
 
 ```
-http://<server-ip>:9000
+http://localhost:9000
 ```
+<img width="1500" height="700" alt="image" src="https://github.com/user-attachments/assets/eddb5a9b-48b7-4ee1-bbad-f5e2ab6f3292" />
+
 
 Default Credentials:
 
@@ -398,16 +459,25 @@ For Production:
 
 # 19. References
 
-- Official SonarQube Documentation
-- Official Ansible Documentation
-- PostgreSQL Documentation
+| Component                      | Description                                                                    | Official Link                                                                                                                                                          |
+| ------------------------------ | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SonarQube Documentation        | Complete setup, configuration, upgrade, and administration guide for SonarQube | [https://docs.sonarsource.com/sonarqube/latest/](https://docs.sonarsource.com/sonarqube/latest/)                                                                       |
+| SonarQube Download Page        | Download Community, Developer, Enterprise editions                             | [https://www.sonarqube.org/downloads/](https://www.sonarqube.org/downloads/)                                                                                           |
+| SonarQube System Requirements  | Hardware, OS, Java, DB requirements                                            | [https://docs.sonarsource.com/sonarqube/latest/requirements/system-requirements/](https://docs.sonarsource.com/sonarqube/latest/requirements/system-requirements/)     |
+| Ansible Documentation          | Official Ansible automation and role development documentation                 | [https://docs.ansible.com/](https://docs.ansible.com/)                                                                                                                 |
+| Ansible Role Development Guide | Best practices for creating reusable Ansible roles                             | [https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html) |
+| PostgreSQL Documentation       | Official PostgreSQL administration and SQL reference                           | [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)                                                                                                   |
+| PostgreSQL Role & Privileges   | Managing database users, schema permissions                                    | [https://www.postgresql.org/docs/current/sql-grant.html](https://www.postgresql.org/docs/current/sql-grant.html)                                                       |
+| Java 17 Documentation          | OpenJDK installation and configuration                                         | [https://openjdk.org/projects/jdk/17/](https://openjdk.org/projects/jdk/17/)                                                                                           |
 
 ---
 
-# Author
+# 20. Contact Information
 
-DevOps Team  
-Project: SonarQube Software Configuration  
-Sprint: Documentation Phase  
+| Contact Type | Details                                                             |
+| ------------ | ------------------------------------------------------------------- |
+| Name         | Suraj Tripathi                                                      |
+| Role         | DevOps Trainee                                                      |
+| Email        | [suraj.tripathi.snaatak@mygurukulam.co](mailto:suraj.tripathi.snaatak@mygurukulam.co) | 
 
 ---
