@@ -61,9 +61,9 @@
 
 ---
 
-# 1. Introduction
+## 1. Introduction
 
-## What is SonarQube?
+### What is SonarQube?
 
 **SonarQube** is an open-source platform used for continuous inspection of code quality. It performs:
 
@@ -82,7 +82,7 @@ It integrates seamlessly with CI/CD tools like:
 
 ---
 
-# 2. Objective of This Document
+## 2. Objective of This Document
 
 This document provides:
 
@@ -97,7 +97,7 @@ Note: This document covers documentation only. Implementation will be done in th
 
 ---
 
-# 3. Why SonarQube?
+## 3. Why SonarQube?
 
 | Problem | Solution with SonarQube |
 |----------|-------------------------|
@@ -109,9 +109,9 @@ Note: This document covers documentation only. Implementation will be done in th
 
 ---
 
-# 4. Why Ansible for SonarQube Setup?
+## 4. Why Ansible for SonarQube Setup?
 
-## What is Ansible?
+### What is Ansible?
 
 Ansible is an automation tool used for:
 
@@ -120,7 +120,7 @@ Ansible is an automation tool used for:
 - Software provisioning
 - Server automation
 
-### Benefits of Using Ansible Role
+#### Benefits of Using Ansible Role
 
 | Manual Setup | Ansible Role |
 |--------------|--------------|
@@ -131,7 +131,7 @@ Ansible is an automation tool used for:
 
 ---
 
-# 5. SonarQube Architecture Overview
+## 5. SonarQube Architecture Overview
 
 <img width="900" height="525" alt="image" src="https://github.com/user-attachments/assets/7aa809c9-7e8e-4863-b0ee-ac14881d7f70" />
 
@@ -146,7 +146,7 @@ Ansible is an automation tool used for:
 
 ---
 
-# 6. System Requirements
+## 6. System Requirements
 
 ## Hardware
 
@@ -156,7 +156,7 @@ Ansible is an automation tool used for:
 | CPU | 2 Core |
 | Disk | 10GB |
 
-## Software
+### Software
 
 - Linux (Ubuntu/CentOS)
 - Java 17
@@ -164,7 +164,7 @@ Ansible is an automation tool used for:
 
 ---
 
-# 7. Ansible Role Structure
+## 7. Ansible Role Structure
 
 ```
 roles/
@@ -189,7 +189,7 @@ roles/
 
 ---
 
-# 8. Role Variables (defaults/main.yml)
+## 8. Role Variables (defaults/main.yml)
 
 ```yaml
 sonarqube_version: "10.4.0"
@@ -209,7 +209,7 @@ Why?
 
 ---
 
-# 9. Installation Tasks (tasks/install.yml)
+## 9. Installation Tasks (tasks/install.yml)
 
 Responsibilities:
 
@@ -230,7 +230,7 @@ Example:
 
 ---
 
-# 10. Configuration Tasks (tasks/configure.yml)
+## 10. Configuration Tasks (tasks/configure.yml)
 
 Template: `templates/sonar.properties.j2`
 
@@ -249,7 +249,7 @@ Why use template?
 
 ---
 
-# 11. Service Configuration
+## 11. Service Configuration
 
 Systemd file location:
 
@@ -269,7 +269,7 @@ Enable service:
 
 ---
 
-# 12. Handlers
+## 12. Handlers
 
 ```yaml
 - name: restart sonarqube
@@ -285,7 +285,7 @@ Purpose:
 
 ---
 
-# 13. Deployment Workflow
+## 13. Deployment Workflow
 
 ```
 Developer → Push Code → CI Pipeline → Sonar Scanner → SonarQube Server → Database
@@ -295,9 +295,9 @@ Developer → Push Code → CI Pipeline → Sonar Scanner → SonarQube Server �
 
 ---
 
-# 14. POC – Manual SonarQube Setup (Without Ansible)
+## 14. POC – Manual SonarQube Setup (Without Ansible)
 
-## Step 1: Install Java
+### Step 1: Install Java
 
 ```bash
 sudo apt update
@@ -309,7 +309,7 @@ java -version
 
 ---
 
-## Step 2: Install PostgreSQL
+### Step 2: Install PostgreSQL
 
 ```bash
 sudo apt install postgresql postgresql-contrib -y
@@ -337,7 +337,7 @@ ALTER SCHEMA public OWNER TO sonar;
 
 ---
 
-## Step 3: Download SonarQube
+### Step 3: Download SonarQube
 
 ```bash
 cd /opt
@@ -349,7 +349,7 @@ sudo chown -R sonar:sonar /opt/sonarqube
 
 ---
 
-## Step 4: Configure Database
+### Step 4: Configure Database
 
 Edit:
 
@@ -369,7 +369,7 @@ sonar.jdbc.url=jdbc:postgresql://localhost/sonarqube
 
 ---
 
-## Step 5: Start SonarQube
+### Step 5: Start SonarQube
 
 ```bash
 sudo -u sonar /opt/sonarqube/bin/linux-x86-64/sonar.sh start
@@ -379,7 +379,7 @@ sudo -u sonar /opt/sonarqube/bin/linux-x86-64/sonar.sh start
 
 ---
 
-## Step 6: Access UI
+### Step 6: Access UI
 
 ```
 http://localhost:9000
@@ -395,7 +395,7 @@ admin / admin
 
 ---
 
-# 15. Security Best Practices
+## 15. Security Best Practices
 
 - Change default admin password
 - Use HTTPS with NGINX reverse proxy
@@ -406,7 +406,7 @@ admin / admin
 
 ---
 
-# 16. Monitoring Recommendations
+## 16. Monitoring Recommendations
 
 Monitor:
 
@@ -424,7 +424,7 @@ Recommended Tools:
 
 ---
 
-# 17. Advantages of Using Ansible Role
+## 17. Advantages of Using Ansible Role
 
 | Feature | Benefit |
 |----------|---------|
@@ -436,7 +436,7 @@ Recommended Tools:
 
 ---
 
-# 18. Conclusion
+## 18. Conclusion
 
 For Production:
 
@@ -457,7 +457,7 @@ For Production:
 
 ---
 
-# 19. References
+## 19. References
 
 | Component                      | Description                                                                    | Official Link                                                                                                                                                          |
 | ------------------------------ | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -472,7 +472,7 @@ For Production:
 
 ---
 
-# 20. Contact Information
+## 20. Contact Information
 
 | Contact Type | Details                                                             |
 | ------------ | ------------------------------------------------------------------- |
