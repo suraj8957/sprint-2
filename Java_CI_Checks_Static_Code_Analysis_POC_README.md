@@ -102,6 +102,8 @@ After login:
 - Generate a new Token
 
 - Copy the generated token
+<img width="1844" height="453" alt="image" src="https://github.com/user-attachments/assets/32b930b4-ba89-4a02-a000-af8bae09fb82" />
+
 
 ### 3.5: Run SonarQube Analysis
 
