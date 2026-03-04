@@ -93,7 +93,7 @@ Continuous Integration is a practice where:
 ## 3. What is Static Code Analysis?
 Static Code Analysis is:
 
-An automated process of analyzing source code without executing it to detect bugs, vulnerabilities, and code smells.
+Static Code Analysis is an automated process of analyzing source code without executing it to detect bugs, vulnerabilities, and code smells.
 
 It checks:
 - Coding standards
