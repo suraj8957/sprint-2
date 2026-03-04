@@ -6,8 +6,23 @@
 | Author | Created on | Version | Last updated by | Last edited on | Pre Reviewer | L0 Reviewer | L1 Reviewer | L2 Reviewer |
 |--------|------------|---------|-----------------|----------------|--------------|-------------|-------------|-------------|
 | Suraj Tripathi | 1-03-2026 | v1.0 | Suraj Tripathi | 1-03-2026 |              | Aniruddh    | Shreya S    | Ashwani |
----
 
+---
+## Table of Contents
+
+- [1. Objective](#1-objective)
+- [2. Prerequisites](#2-prerequisites)
+- [3. Implementation Steps](#3-implementation-steps)
+  - [3.1 Clone the Repository](#31-clone-the-repository)
+  - [3.2 Verify Project Build](#32-verify-project-build)
+  - [3.3 Start SonarQube Server](#33-start-sonarqube-server)
+  - [3.4 Access SonarQube Dashboard](#34-access-sonarqube-dashboard)
+  - [3.5 Run SonarQube Analysis](#35-run-sonarqube-analysis)
+  - [3.6 Review SonarQube Report](#36-review-sonarqube-report)
+  - [3.7 Configure Quality Gate](#37-configure-quality-gate-recommended)
+- [4. Re-Scan After Fixes](#4-re-scan-after-fixes)
+- [5. Conclusion](#5-conclusion)
+- [6. Contact Information](#6-contact-information)
 
 ---
 
@@ -42,28 +57,33 @@ Ensure the following tools are installed:
 | SonarQube | 9.x or higher | Running locally |
 
 ---
-
-### Step 1: Clone the Repository
+## 3. Implementation Steps
+### 3.1: Clone the Repository
 
 ```bash
 git clone https://github.com/OT-MICROSERVICES/salary-api.git
 cd salary-api
 ```
-### Step 2: Verify Project Build
+### 3.2: Verify Project Build
 Ensure the project builds successfully before analysis:
-```bash
+```
 mvn clean install
 ```
+or 
+```
+mvn clean install -DskipTests
+```
+
 If the build fails, resolve dependency or configuration issues before proceeding.
 
-### Step 3: Start SonarQube Server
+### 3.3: Start SonarQube Server
 
 ```bash
 cd sonarqube/bin/linux-x86-64
 ./sonar.sh start
 ```
 
-### Step 4: Access SonarQube Dashboard
+### 3.4: Access SonarQube Dashboard
 Open in browser:
 ```bash
 http://localhost:9000
@@ -83,7 +103,7 @@ After login:
 
 - Copy the generated token
 
-### Step 5: Run SonarQube Analysis
+### 3.5: Run SonarQube Analysis
 
 From the root directory of salary-api, execute:
 ```bash
@@ -94,12 +114,15 @@ mvn clean verify sonar:sonar \
 ```
 Replace YOUR_GENERATED_TOKEN with your actual token.
 
-### Step 6: Review SonarQube Report
+### 3.6: Review SonarQube Report
 After successful execution:
 
 - Open Sonar Dashboard
 
 - Select project: salary-api
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ef29ea8f-1224-4252-b4ec-5d25605d0a42" />
+
 
 Review the following metrics:
 | Metric          | Description                   |
@@ -111,7 +134,7 @@ Review the following metrics:
 | Duplications    | Duplicate code blocks         |
 | Technical Debt  | Estimated fix effort          |
 
-### Step 7: Configure Quality Gate (Recommended)
+### 3.7: Configure Quality Gate (Recommended)
 Create a Quality Gate with conditions such as:
 
 - Coverage < 80% → Fail
@@ -124,19 +147,20 @@ Create a Quality Gate with conditions such as:
 
 Assign the Quality Gate to salary-api.
 
-Re-run scan to verify Quality Gate status.
+Re-run scan to verify the Quality Gate status.
 
-#### Re-Scan After Fixes
+## 4. Re-Scan After Fixes
+
 After fixing issues:
 ```bash
 mvn clean verify sonar:sonar \
 -Dsonar.projectKey=salary-api \
 -Dsonar.host.url=http://localhost:9000 \
 -Dsonar.login=YOUR_GENERATED_TOKEN
-```
+```  
 Ensure Quality Gate shows Passed.
 
-## Conclusion
+## 5. Conclusion
 SonarQube provides:
 
 - Centralized dashboard
@@ -151,7 +175,7 @@ SonarQube provides:
 
 This POC demonstrates static code analysis using SonarQube for enterprise-grade Java projects.
 
-## Contact Information
+## 6. Contact Information
 
 | Contact Type | Details                                                             |
 | ------------ | ------------------------------------------------------------------- |
