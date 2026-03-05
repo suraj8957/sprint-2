@@ -79,8 +79,7 @@ If the build fails, resolve dependency or configuration issues before proceeding
 ### 3.3: Start SonarQube Server
 
 ```bash
-cd sonarqube/bin/linux-x86-64
-./sonar.sh start
+sudo -u sonar /opt/sonarqube/bin/linux-x86-64/sonar.sh start
 ```
 
 ### 3.4: Access SonarQube Dashboard
