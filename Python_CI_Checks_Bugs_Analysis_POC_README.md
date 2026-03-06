@@ -192,6 +192,7 @@ This validates bug detection and security scanning for the notification worker s
 | Pylint | Detect bugs and code smells | Warnings and suggestions      |
 | Flake8 | Style validation            | Style errors if present       |
 | Bandit | Security scanning           | Security warnings if detected |
+
 Developers should resolve critical issues before committing code.
 
 ---
