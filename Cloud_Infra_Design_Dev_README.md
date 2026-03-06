@@ -10,7 +10,6 @@
 ---
 ## Table of Contents
 
-- [Document Details](#document-details)
 - [1. Purpose](#1-purpose)
 - [2. What is Cloud Infrastructure Design?](#2-what-is-cloud-infrastructure-design)
 - [3. Why Cloud Infrastructure Design is Important?](#3-why-cloud-infrastructure-design-is-important)
