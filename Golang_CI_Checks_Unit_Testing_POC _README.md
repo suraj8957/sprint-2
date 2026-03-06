@@ -16,21 +16,21 @@ https://github.com/OT-MICROSERVICES/employee-api
 
 ## Table of Contents
 
-1. [Prerequisites](#1-prerequisites)
-2. [Clone Repository](#2-clone-repository)
-3. [Project Structure](#3-project-structure)
-4. [Install Dependencies](#4-install-dependencies)
-5. [Run All Unit Tests](#5-run-all-unit-tests)
-6. [Run Tests with Verbose Output](#6-run-tests-with-verbose-output)
-7. [Exclude Certain Packages (Optional)](#7-exclude-certain-packages-optional)
-8. [Run Tests with Race Detection](#8-run-tests-with-race-detection)
-9. [Generate Code Coverage](#9-generate-code-coverage)
-10. [Generate Coverage Report File](#10-generate-coverage-report-file)
-11. [View Coverage in Browser](#11-view-coverage-in-browser)
-12. [Run Tests for Specific Package](#12-run-tests-for-specific-package)
-13. [Run a Specific Test Function](#13-run-a-specific-test-function)
-14. [Cleaning Test Cache](#14-cleaning-test-cache)
-15. [Contact Information](#15-contact-information)
+- [Prerequisites](#prerequisites)
+- [Clone Repository](#clone-repository)
+- [Project Structure](#project-structure)
+- [Install Dependencies](#install-dependencies)
+- [Run All Unit Tests](#run-all-unit-tests)
+- [Run Tests with Verbose Output](#run-tests-with-verbose-output)
+- [Exclude Certain Packages (Optional)](#exclude-certain-packages-optional)
+- [Run Tests with Race Detection](#run-tests-with-race-detection)
+- [Generate Code Coverage](#generate-code-coverage)
+- [Generate Coverage Report File](#generate-coverage-report-file)
+- [View Coverage in Browser](#view-coverage-in-browser)
+- [Run Tests for Specific Package](#run-tests-for-specific-package)
+- [Run a Specific Test Function](#run-a-specific-test-function)
+- [Cleaning Test Cache](#cleaning-test-cache)
+- [Contact Information](#contact-information)
 ---
 
 # 1. Prerequisites
