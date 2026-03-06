@@ -7,6 +7,39 @@
 |--------|------------|---------|-----------------|----------------|--------------|-------------|-------------|-------------|
 | Suraj Tripathi | 5-03-2026 | v1.0 | Suraj Tripathi | 5-03-2026 |              | Aniruddh    | Shreya S    | Ashwani |
 
+---
+## Table of Contents
+
+- [Document Details](#document-details)
+- [1. Purpose](#1-purpose)
+- [2. What is Cloud Infrastructure Design?](#2-what-is-cloud-infrastructure-design)
+- [3. Why Cloud Infrastructure Design is Important?](#3-why-cloud-infrastructure-design-is-important)
+- [4. Architecture Overview](#4-architecture-overview)
+- [5. Cloud Provider](#5-cloud-provider)
+- [6. Network Design](#6-network-design)
+  - [6.1 VPC](#61-vpc)
+  - [6.2 Subnet Structure](#62-subnet-structure)
+  - [6.3 Internet Gateway](#63-internet-gateway)
+  - [6.4 NAT Gateway](#64-nat-gateway)
+- [7. Compute Layer](#7-compute-layer)
+- [8. Load Balancer](#8-load-balancer)
+- [9. Database Layer](#9-database-layer)
+- [10. Security Architecture](#10-security-architecture)
+  - [10.1 IAM](#101-iam)
+  - [10.2 Security Groups (Stateful Firewall)](#102-security-groups-stateful-firewall)
+  - [10.3 Network ACL (Stateless)](#103-network-acl-stateless)
+  - [10.4 Encryption](#104-encryption)
+- [11. High Availability](#11-high-availability)
+- [12. Disaster Recovery Strategy](#12-disaster-recovery-strategy)
+- [13. Monitoring & Logging](#13-monitoring--logging)
+- [14. Cost Optimization Strategy](#14-cost-optimization-strategy)
+- [15. DevOps Readiness](#15-devops-readiness)
+- [16. Resource Justification](#16-resource-justification)
+- [17. Conclusion](#17-conclusion)
+- [18. Contact Information](#18-contact-information)
+- [19. References](#19-references)
+---
+
 ## 1. Purpose
 
 This contains the detailed design documentation for a Cloud Infrastructure built on Amazon Web Services (AWS) for a Development (DEV) environment.
@@ -296,8 +329,17 @@ This AWS-based Development Cloud Infrastructure:
 It provides a structured, secure, and scalable cloud environment ready for DevOps workflows.
 
 ---
+## 18.  Contact Information
 
-## 18. References
+| Contact Type | Details                                                             |
+| ------------ | ------------------------------------------------------------------- |
+| Name         | Suraj Tripathi                                                      |
+| Role         | DevOps Trainee                                                      |
+| Email        | [suraj.tripathi.snaatak@mygurukulam.co](mailto:suraj.tripathi.snaatak@mygurukulam.co) | 
+
+---
+
+## 19. References
 
 | No. | Resource | Description | Documentation Link |
 |----|----------|-------------|--------------------|
