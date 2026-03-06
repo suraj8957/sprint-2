@@ -1,8 +1,13 @@
 # Cloud Infrastructure Design – Development Environment (AWS)
 
 ---
+## Document Details
 
-# 1. Purpose
+| Author | Created on | Version | Last updated by | Last edited on | Pre Reviewer | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+|--------|------------|---------|-----------------|----------------|--------------|-------------|-------------|-------------|
+| Suraj Tripathi | 5-03-2026 | v1.0 | Suraj Tripathi | 5-03-2026 |              | Aniruddh    | Shreya S    | Ashwani |
+
+## 1. Purpose
 
 This contains the detailed design documentation for a Cloud Infrastructure built on Amazon Web Services (AWS) for a Development (DEV) environment.
 
@@ -12,7 +17,7 @@ This document explains the concept of Cloud Infrastructure Design from basic to 
 
 ---
 
-# 2. What is Cloud Infrastructure Design?
+## 2. What is Cloud Infrastructure Design?
 
 Cloud Infrastructure Design is the process of architecting and organizing cloud resources (network, compute, storage, security, monitoring) in a structured, secure, scalable, and cost-optimized manner.
 
@@ -38,7 +43,7 @@ A well-designed infrastructure ensures:
 
 ---
 
-# 3. Why Cloud Infrastructure Design is Important?
+## 3. Why Cloud Infrastructure Design is Important?
 
 Proper cloud design:
 
@@ -53,7 +58,7 @@ Without proper design, cloud environments can become insecure, expensive, and di
 
 ---
 
-# 4. Architecture Overview
+## 4. Architecture Overview
 
 This infrastructure follows a Three-Tier Architecture:
 
@@ -70,7 +75,7 @@ Internet
 
 ---
 
-# 5. Cloud Provider
+## 5. Cloud Provider
 
 Cloud Provider: Amazon Web Services (AWS)  
 Region: ap-south-1 (Mumbai)  
@@ -88,15 +93,15 @@ AWS services used:
 
 ---
 
-# 6. Network Design
+## 6. Network Design
 
-## 6.1 VPC
+### 6.1 VPC
 
 - CIDR: 10.0.0.0/16
 - DNS enabled
 - Provides network isolation
 
-## 6.2 Subnet Structure
+### 6.2 Subnet Structure
 
 Public Subnets:
 - Used for Load Balancer
@@ -110,17 +115,17 @@ Private DB Subnets:
 - Host database
 - Strictly isolated
 
-## 6.3 Internet Gateway
+### 6.3 Internet Gateway
 
 Allows public subnet to communicate with internet.
 
-## 6.4 NAT Gateway
+### 6.4 NAT Gateway
 
 Allows private instances outbound internet access without exposing them publicly.
 
 ---
 
-# 7. Compute Layer
+## 7. Compute Layer
 
 EC2 instances host the application.
 
@@ -136,7 +141,7 @@ Purpose:
 
 ---
 
-# 8. Load Balancer
+## 8. Load Balancer
 
 Application Load Balancer (ALB)
 
@@ -152,7 +157,7 @@ Benefits:
 
 ---
 
-# 9. Database Layer
+## 9. Database Layer
 
 Amazon RDS (MySQL / PostgreSQL)
 
@@ -170,16 +175,16 @@ Benefits:
 
 ---
 
-# 10. Security Architecture
+## 10. Security Architecture
 
-## 10.1 IAM
+### 10.1 IAM
 
 - Role-Based Access Control
 - Least privilege policy
 - MFA enabled
 - No direct root usage
 
-## 10.2 Security Groups (Stateful Firewall)
+### 10.2 Security Groups (Stateful Firewall)
 
 ALB:
 - 80, 443 from internet
@@ -191,13 +196,13 @@ App Servers:
 Database:
 - 3306 from App SG only
 
-## 10.3 Network ACL (Stateless)
+### 10.3 Network ACL (Stateless)
 
 - Public subnet allows HTTP/HTTPS
 - Private subnets restrict external traffic
 - Internal traffic allowed as required
 
-## 10.4 Encryption
+### 10.4 Encryption
 
 - EBS encryption
 - RDS encryption
@@ -206,7 +211,7 @@ Database:
 
 ---
 
-# 11. High Availability
+## 11. High Availability
 
 - Multi-AZ App deployment
 - Load Balancer health checks
@@ -215,7 +220,7 @@ Database:
 
 ---
 
-# 12. Disaster Recovery Strategy
+## 12. Disaster Recovery Strategy
 
 - RDS automated backups
 - EBS snapshots
@@ -227,7 +232,7 @@ RPO: < 30 Minutes
 
 ---
 
-# 13. Monitoring & Logging
+## 13. Monitoring & Logging
 
 Monitoring:
 - CloudWatch Metrics
@@ -242,7 +247,7 @@ Logging:
 
 ---
 
-# 14. Cost Optimization Strategy
+## 14. Cost Optimization Strategy
 
 - Small instance sizes (DEV)
 - Auto Scaling
@@ -252,7 +257,7 @@ Logging:
 
 ---
 
-# 15. DevOps Readiness
+## 15. DevOps Readiness
 
 Infrastructure supports:
 
@@ -264,7 +269,7 @@ Infrastructure supports:
 
 ---
 
-# 16. Resource Justification
+## 16. Resource Justification
 
 | Resource | Reason |
 |----------|--------|
@@ -278,7 +283,7 @@ Infrastructure supports:
 
 ---
 
-# 17. Conclusion
+## 17. Conclusion
 
 This AWS-based Development Cloud Infrastructure:
 
@@ -292,30 +297,17 @@ It provides a structured, secure, and scalable cloud environment ready for DevOp
 
 ---
 
-# 18. References
+## 18. References
 
-AWS Well-Architected Framework  
-https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html  
-
-Amazon VPC Documentation  
-https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html  
-
-Amazon EC2 Documentation  
-https://docs.aws.amazon.com/ec2/index.html  
-
-Elastic Load Balancing Documentation  
-https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html  
-
-Amazon RDS Documentation  
-https://docs.aws.amazon.com/rds/index.html  
-
-AWS IAM Documentation  
-https://docs.aws.amazon.com/iam/index.html  
-
-AWS CloudWatch Documentation  
-https://docs.aws.amazon.com/cloudwatch/index.html  
-
-AWS CloudTrail Documentation  
-https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html  
+| No. | Resource | Description | Documentation Link |
+|----|----------|-------------|--------------------|
+| 1 | AWS Well-Architected Framework | Provides best practices and architectural principles for building secure, high-performing, resilient, and efficient cloud infrastructure. | https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html |
+| 2 | Amazon VPC Documentation | Explains how to design isolated virtual networks in AWS including subnets, route tables, and gateways. | https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html |
+| 3 | Amazon EC2 Documentation | Documentation for launching, configuring, and managing virtual servers (EC2 instances) in AWS. | https://docs.aws.amazon.com/ec2/index.html |
+| 4 | Elastic Load Balancing Documentation | Guides on distributing incoming application traffic across multiple targets such as EC2 instances. | https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html |
+| 5 | Amazon RDS Documentation | Documentation for setting up and managing relational databases in AWS with automated backups, patching, and scaling. | https://docs.aws.amazon.com/rds/index.html |
+| 6 | AWS IAM Documentation | Provides information about identity and access management for securely controlling access to AWS resources. | https://docs.aws.amazon.com/iam/index.html |
+| 7 | AWS CloudWatch Documentation | Explains monitoring, logging, metrics collection, and alerting for AWS resources and applications. | https://docs.aws.amazon.com/cloudwatch/index.html |
+| 8 | AWS CloudTrail Documentation | Documentation for auditing AWS account activity and tracking API calls for security and compliance. | https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html |
 
 ---
