@@ -48,14 +48,13 @@ Verify installation:
 
 ```bash
 go version
-git --version
-
 ```
+<img width="1764" height="79" alt="image" src="https://github.com/user-attachments/assets/bb43a49b-5456-4d5f-abb1-aee34198096a" />
 
-Example output:
 ```bash
-go version go1.21 linux/amd64
+git --version
 ```
+<img width="1764" height="79" alt="image" src="https://github.com/user-attachments/assets/d2a4cdfe-5368-4d3e-bbcf-eb8b754c000f" />
 
 ---
 
@@ -85,7 +84,7 @@ employee-api
 ├── Dockerfile
 └── Makefile
 ```
-Unit tests are present in multiple packages such as:
+Unit tests are present in multiple packages, such as:
 - api
 
 - client
@@ -96,7 +95,7 @@ Unit tests are present in multiple packages such as:
 
 - routes
 
-Test files follow Go naming convention:
+Test files follow the Go naming convention:
 ```
 *_test.go
 ```
@@ -116,6 +115,8 @@ or
 ```bash
 go mod download
 ```
+<img width="1848" height="781" alt="image" src="https://github.com/user-attachments/assets/4e347132-54e5-4d78-9c20-521018d7099b" />
+
 
 ---
 
@@ -125,6 +126,8 @@ Execute tests for all packages.
 go test ./...
 ```
 Output:
+<img width="1854" height="999" alt="image" src="https://github.com/user-attachments/assets/9a4919c6-12d5-489c-a7f4-36fdab18e71b" />
+
 
 ---
 ## 6. Run Tests with Verbose Output
@@ -132,6 +135,8 @@ Output:
 go test -v ./...
 ```
 Output:
+<img width="1854" height="999" alt="image" src="https://github.com/user-attachments/assets/c95126d3-d56c-4f7d-b8df-0ac4e0ea779e" />
+
 
 ---
 ## 7. Exclude Certain Packages (Optional)
@@ -139,12 +144,16 @@ Sometimes we exclude packages like docs or models during testing.
 ```bash
 go test $(go list ./... | grep -v docs | grep -v model)
 ```
+<img width="1854" height="999" alt="image" src="https://github.com/user-attachments/assets/39a087a2-6b22-4e89-be0e-efb874a4fe04" />
+
 ---
 ## 8. Run Tests with Race Detection
 Detect race conditions in concurrent code.
 ```bash
 go test -race ./...
 ```
+<img width="1854" height="999" alt="image" src="https://github.com/user-attachments/assets/d67d4811-289c-4ead-b61f-b98309ecbedb" />
+
 ---
 ## 9. Generate Code Coverage
 Run tests with coverage.
@@ -152,6 +161,8 @@ Run tests with coverage.
 go test -cover ./...
 ```
 output:
+<img width="1861" height="990" alt="image" src="https://github.com/user-attachments/assets/0b4eb270-1e07-4626-8881-aebec5247a0d" />
+<img width="1861" height="1002" alt="image" src="https://github.com/user-attachments/assets/d33bd844-8730-491e-a7b4-8a0def43153f" />
 
 ---
 
@@ -159,6 +170,10 @@ output:
 ```bash
 go test ./... -coverprofile=cover.out
 ```
+<img width="1861" height="1002" alt="image" src="https://github.com/user-attachments/assets/45a6a3f6-bf0b-4cf4-ad2e-c23534e7a59a" />
+<img width="1861" height="1002" alt="image" src="https://github.com/user-attachments/assets/4a4a6385-5f7b-4d4f-995e-52c431fb4f01" />
+
+
 
 ---
 ## 11. View Coverage in Browser
@@ -166,6 +181,8 @@ go test ./... -coverprofile=cover.out
 go tool cover -html=cover.out
 ```
 This opens an HTML coverage report in the browser.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/391ab90d-1069-41db-98d9-4ba5694244c4" />
+
 
 ---
 ## 12. Run Tests for Specific Package
@@ -173,12 +190,15 @@ for api package:
 ```bash
 go test ./api
 ```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/19e5cde5-0447-4666-a5d2-1ccb0e3c5c0b" />
+
 
 ---
 ## 13. Run a Specific Test Function
 ```bash
 go test -run TestEmployeeSearch ./api
 ```
+<img width="1861" height="68" alt="image" src="https://github.com/user-attachments/assets/10c62bb8-54b6-4bc6-b80f-896c6d39e368" />
 
 ---
 
