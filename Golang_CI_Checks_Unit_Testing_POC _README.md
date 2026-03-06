@@ -16,21 +16,22 @@ https://github.com/OT-MICROSERVICES/employee-api
 
 ## Table of Contents
 
-- [Prerequisites](#prerequisites)
-- [Clone Repository](#clone-repository)
-- [Project Structure](#project-structure)
-- [Install Dependencies](#install-dependencies)
-- [Run All Unit Tests](#run-all-unit-tests)
-- [Run Tests with Verbose Output](#run-tests-with-verbose-output)
-- [Exclude Certain Packages (Optional)](#exclude-certain-packages-optional)
-- [Run Tests with Race Detection](#run-tests-with-race-detection)
-- [Generate Code Coverage](#generate-code-coverage)
-- [Generate Coverage Report File](#generate-coverage-report-file)
-- [View Coverage in Browser](#view-coverage-in-browser)
-- [Run Tests for Specific Package](#run-tests-for-specific-package)
-- [Run a Specific Test Function](#run-a-specific-test-function)
-- [Cleaning Test Cache](#cleaning-test-cache)
-- [Contact Information](#contact-information)
+- [Prerequisites](#1-prerequisites)
+- [Clone Repository](#2-clone-repository)
+- [Project Structure](#3-project-structure)
+- [Install Dependencies](#4-install-dependencies)
+- [Run All Unit Tests](#5-run-all-unit-tests)
+- [Run Tests with Verbose Output](#6-run-tests-with-verbose-output)
+- [Exclude Certain Packages (Optional)](#7-exclude-certain-packages-optional)
+- [Run Tests with Race Detection](#8-run-tests-with-race-detection)
+- [Generate Code Coverage](#9-generate-code-coverage)
+- [Generate Coverage Report File](#10-generate-coverage-report-file)
+- [View Coverage in Browser](#11-view-coverage-in-browser)
+- [Run Tests for Specific Package](#12-run-tests-for-specific-package)
+- [Run a Specific Test Function](#13-run-a-specific-test-function)
+- [Cleaning Test Cache](#14-cleaning-test-cache)
+- [Contact Information](#15-contact-information)
+
 ---
 
 # 1. Prerequisites
