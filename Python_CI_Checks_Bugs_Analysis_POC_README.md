@@ -108,6 +108,8 @@ Activate the environment.
 ```bash
 source venv/bin/activate
 ```
+<img width="1853" height="82" alt="image" src="https://github.com/user-attachments/assets/8b08bf15-a344-4cae-88b6-fd67adc63185" />
+
 ### Step 3 – Install Bug Analysis Tools
 Install the required static analysis tools.
 ```bash
@@ -119,6 +121,8 @@ pylint --version
 flake8 --version
 bandit --version
 ```
+<img width="1853" height="203" alt="image" src="https://github.com/user-attachments/assets/ddd73028-460d-4229-84cc-64caa7ad25fd" />
+
 ---
 
 ## 6. Running Bug Analysis on Attendance API
@@ -140,6 +144,8 @@ Pylint analyzes the codebase and reports:
 - logical issues
 
 Output:
+<img width="1848" height="600" alt="image" src="https://github.com/user-attachments/assets/8527e736-c1e2-43ec-8994-6c1d48f08a3e" />
+
 
 ##### Run Flake8
 ```bash
@@ -148,6 +154,8 @@ flake8 .
 Flake8 checks coding style and formatting.
 
 Output
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/319d9759-ebc1-4643-990a-285033cf25cb" />
+
 
 ##### Run Bandit Security Scan
 ```bash
@@ -156,6 +164,8 @@ bandit -r .
 Bandit scans the code for potential security issues.
 
 Output
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ccd6e4aa-3cc3-41df-a564-8f3d071e15f3" />
+
 
 ---
 
@@ -169,14 +179,21 @@ Run the same analysis tools.
 ```bash
 pylint .
 ```
+<img width="1906" height="331" alt="image" src="https://github.com/user-attachments/assets/8dc31ae1-e3e9-460c-894d-2bc445f8590e" />
+
+
 ##### Run Flake8
 ```bash
 flake8 .
 ```
+<img width="1920" height="490" alt="image" src="https://github.com/user-attachments/assets/fbcb63b7-7831-4506-a31c-530cc6b85970" />
+
 ##### Run Bandit
 ```bash
 bandit -r .
 ```
+<img width="1920" height="602" alt="image" src="https://github.com/user-attachments/assets/412cdfc6-8270-4a38-8832-53f8d172c745" />
+
 This validates bug detection and security scanning for the notification worker service.
 
 ---
@@ -222,7 +239,7 @@ Supporting Tools
 
 - Bandit
 
-These tools together provide comprehensive Python code quality analysis and can be integrated into CI pipelines for automated validation.
+Together, these tools provide comprehensive Python code quality analysis and can be integrated into CI pipelines for automated validation.
 
 ---
 
